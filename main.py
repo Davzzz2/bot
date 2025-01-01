@@ -11,7 +11,7 @@ import io
 from keep_alive import keep_alive
 
 # Discord Bot Token
-DISCORD_BOT_TOKEN = 'MTMyMTU0MDgwNDkwMDE2MzY0NQ.G4aOla.brshgqMYJgs7XBuFg5KiIiZI55ADnZtsKuMytU'  # Replace with your token
+DISCORD_BOT_TOKEN = 'TOKEN'  # Replace with your token
 
 # Google Analytics Properties and JSON Credentials
 GA_PROPERTIES = {
