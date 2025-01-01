@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gamble-assist",
+  "private_key_id": "231452b6280e92a6b5d129e30ce5f615ef7102ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCglwj7hOYl59J9\nH3lsW8z0JSgsLqz8Sr6KA95kKDabJO0nqRSoNrKYdHFqw09lKrw8l0Ex3WwJMPky\noWttCStJO7R5O3WXKuwyW2aWfMphYGpAJT5er7EzytUXIC1G3aWhKpNyZ/R9fC8U\nQ5Wkhx3LpacEoht+YAUJUGeueKovGfq/f7SGelYdA0TNjp84lOd9zZZsA7Qu969l\nlA4KnO64NHZMZ5k9bc6aALo9OAtYifqZfdsLH/iKzw2jYqsS0iuWzZOXQWVWTVp9\ntXX4O3/SOQopVCnpsbqqx64wHcbpGZXeGmTYi6Bv2FXGrLFa+yykdQrz+ZQJnbAk\nqiO5VIzdAgMBAAECggEAAlamCIDt7QgMK6BFX2DoLMyht3Wn3+CiwlW+Fk1I8PIV\nC1UjT4kZtANLZ4JClLbjmNTxsRfdVouXsAy5CL8ab0Lm+jZLHGbBRmvITvwFjRd0\nqfcg37YalCYppjWPaI8aYKzDCuZyoU/T9lfpmkS8GAFohjZqGhQB3sSEo1NvKae8\nSaO1eZTd806o1z/lZcijDAqMeZBv3yGZ19vuhjlXnmNIZ+kUSABxqId9Fv6PtxdG\nz4GOa4WQHWA4tVL7QJuHI0oxR8gDArdrCi2iTHiJooMDLVCvVXDhLrfXFaDau7j5\nFeZgt4/xTWXSDPBizywO+ZFtwGAx0v1/eLZqn2b/oQKBgQDK2eJk2gzSP11hGO+Y\n2QFxkC+HtCNBMwQaHVNGujPaHkdf7RjfqH0tA60NrJd0wk/H+JnW1Viyw1JF1eVM\nzvCB6eJk31HmUIKk+M7qXrQcL84CLa+7YLdlTcLh6IZc0+HEFA78+F7vsgoZ1/H7\ntbZJRoKrG8XPLVfPl9k4i+NzlQKBgQDKqoLQLUZjAM3RqvICQbObTSIqlgLvvzNB\nMlEg3iv2Lr3uQwLZH8nTfSlNp1fhhZkYZfTB14msLYLWlsKwumrldGh7LULja8pq\nsjuhqFOWrZmzZXWVCjeYccHguEXb2FCMyywOYrmO2cKUQFbPKJF6lNRsalLVFa51\n0clRVwhiKQKBgQCymzXjZrpzRKeLntEX27qRq0quScXg2nJ6K+fvFnQhURe3NqP4\nCfptcBcnOxgADjcA87tAlYkLnT8LjlHfVzYcrTpRZvBNwgXGC+zkH46mYtEYyfE5\nIudXoyg8kOf9Q/I9Gww3YNj2Y+TQ7Hp8Dnr5+cODtWhuCpaOij0QtNsIIQKBgCqf\nV6mei/oQVjjtQb51wOc9fp0ENZPkW0wv394Qu6AnzmwIjdXKGLEw1nntYs8cQMlf\nz+zgfqTGYYjt5f4zBn5BUCPvreyUY9qyp1XlR8cdtYCEKwlwP6cA7axsNMz6nl4t\n8JMJ8kp3w7NYIKmqt4XXPSGb7tW/nJRMzZEcw7eZAoGASeSM8kDt6IiKHtD1oP43\nkv/e/hVNTCxqzGAQYt1DMa5uVPXJan8OzRoBBKql7+OdfAczwVv1C5pakNZv4rm8\nwVpA4tf1+TaQqTgnV3/O3KaVHGCRufvn1ieswCguWkEhafAVl0R4HskmTHp6Ad77\nMv8oIYBzUW4iwgH8KA7R0yI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gambleassist@gamble-assist.iam.gserviceaccount.com",
+  "client_id": "105929520812631934823",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gambleassist%40gamble-assist.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
