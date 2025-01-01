@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -7,13 +8,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 import io
 
-# Keep-Alive for Replit
+# Keep-Alive for Railway / Replit
 from keep_alive import keep_alive
 
-# Discord Bot Token
-DISCORD_BOT_TOKEN = 'TOKEN'  # Replace with your token
+# ✅ Load Discord Bot Token from Environment Variable
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+if not DISCORD_BOT_TOKEN:
+    raise ValueError("Bot token is missing. Please set the DISCORD_BOT_TOKEN environment variable.")
 
-# Google Analytics Properties and JSON Credentials
+# ✅ Google Analytics Properties and JSON Credentials
 GA_PROPERTIES = {
     'Leaderboard': {
         'property_id': '471303810',
@@ -25,21 +28,26 @@ GA_PROPERTIES = {
     }
 }
 
-# Google Analytics API Scope
+# ✅ Google Analytics API Scope
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 
-# Initialize the Bot
+# ✅ Initialize the Bot with Proper Intents
 intents = discord.Intents.default()
+intents.typing = False
+intents.presences = True
+intents.messages = True
+intents.message_content = True  # Required for accessing message content
+
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Google Analytics Authentication
+# ✅ Google Analytics Authentication
 def get_ga_service(credentials_file):
     credentials = service_account.Credentials.from_service_account_file(
         credentials_file, scopes=SCOPES
     )
     return build('analyticsdata', 'v1beta', credentials=credentials)
 
-# Fetch Analytics Data
+# ✅ Fetch Analytics Data
 def get_analytics_data(website, duration):
     if website not in GA_PROPERTIES:
         raise ValueError("Invalid website selected.")
@@ -76,7 +84,7 @@ def get_analytics_data(website, duration):
 
     return result, total_views
 
-# Generate Chart
+# ✅ Generate Analytics Chart
 def generate_chart(data):
     dates = [date for date, _ in data]
     views = [views for _, views in data]
@@ -102,7 +110,7 @@ def generate_chart(data):
     img_bytes.seek(0)
     return img_bytes
 
-# Step 1: Choose Website
+# ✅ Step 1: Choose Website
 class WebsiteSelection(discord.ui.View):
     def __init__(self):
         super().__init__()
@@ -123,7 +131,7 @@ class WebsiteSelection(discord.ui.View):
             ephemeral=True
         )
 
-# Step 2: Choose Duration
+# ✅ Step 2: Choose Duration
 class DurationSelection(discord.ui.View):
     def __init__(self, website):
         super().__init__()
@@ -158,7 +166,7 @@ class DurationSelection(discord.ui.View):
         except Exception as e:
             await interaction.response.send_message(f"❌ Error: {e}", ephemeral=True)
 
-# Command Handler
+# ✅ Command Handler
 @bot.tree.command(name="analytics", description="View analytics data with interactive menus")
 async def analytics(interaction: discord.Interaction):
     embed = discord.Embed(
@@ -169,12 +177,12 @@ async def analytics(interaction: discord.Interaction):
     embed.set_footer(text="Choose a website below:")
     await interaction.response.send_message(embed=embed, view=WebsiteSelection(), ephemeral=True)
 
-# On Ready
+# ✅ On Ready
 @bot.event
 async def on_ready():
     print(f'✅ Logged in as {bot.user}!')
     await bot.tree.sync()
 
-# Keep the bot alive on Replit
+# ✅ Keep the bot alive
 keep_alive()
 bot.run(DISCORD_BOT_TOKEN)
